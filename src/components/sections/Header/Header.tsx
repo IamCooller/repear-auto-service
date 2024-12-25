@@ -11,7 +11,7 @@ const Header = () => {
       <div className="container py-9 flex items-center">
         {/* Логотип */}
         <Link href="/" className="shrink-0 relative z-20">
-          <Image src="/logo.svg" width={168} height={48} alt="logo" />
+          <Image src="/logo.svg" width={168} height={48} alt="logo" priority />
         </Link>
 
         <Menu links={MenuLinks} address={_address} addressLink={_addressLink} />

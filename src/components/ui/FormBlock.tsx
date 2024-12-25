@@ -1,7 +1,14 @@
 'use client';
 import React, { useState } from 'react';
 import { Button } from './button';
-import { Form, FormControl, FormField, FormItem, FormMessage } from './form';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage
+} from './form';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -114,6 +121,7 @@ const FormBlock = () => {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
+                  <FormLabel className="hidden">Full Name</FormLabel>
                   <Input
                     {...field}
                     type="text"
@@ -132,6 +140,7 @@ const FormBlock = () => {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
+                  <FormLabel className="hidden">Phone Number</FormLabel>
                   <Input
                     {...field}
                     type="tel"
@@ -151,6 +160,7 @@ const FormBlock = () => {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
+                  <FormLabel className="hidden">VIN Number</FormLabel>
                   <Input {...field} type="text" placeholder="VIN Number" />
                 </FormControl>
                 <FormMessage />
@@ -164,6 +174,7 @@ const FormBlock = () => {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
+                  <FormLabel className="hidden">Comments</FormLabel>
                   <Input
                     {...field}
                     type="text"
@@ -180,6 +191,7 @@ const FormBlock = () => {
             {[0, 1, 2].map(index => (
               <FormItem key={index}>
                 <FormControl>
+                  <FormLabel className="hidden">File Upload</FormLabel>
                   <button
                     className={`w-full cursor-pointer flex items-center justify-between px-[24px] py-[29px]  bg-black relative hover:bg-white hover:text-black border-2  font-robotoborder-transparent hover:border-black active:scale-95  transition-all duration-300 ease-in-out ${
                       form.watch('files')[index] ? 'text-red' : 'text-white'

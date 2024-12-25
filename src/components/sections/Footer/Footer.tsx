@@ -92,6 +92,7 @@ const Footer = () => {
             </li>
           </ul>
           <iframe
+            title="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.6294823734715!2d-71.1490055!3d42.2437281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37fb20b440001%3A0x730da0e8b68208d6!2s20%20Cliff%20Way%2C%20Dedham%2C%20MA%2002026%2C%20USA!5e0!3m2!1sen!2sca!4v1735106995884!5m2!1sen!2sca"
             width="670"
             height="170"
