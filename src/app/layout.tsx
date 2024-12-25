@@ -6,8 +6,9 @@ import Header from '@/components/sections/Header/Header';
 import { Toaster } from '@/components/ui/toaster';
 import Footer from '@/components/sections/Footer/Footer';
 
-const title = '';
-const description = '';
+const title = 'Auto Body Shop in Boston, MA | World Auto Body Inc';
+const description =
+  'World Auto Body Inc. has been providing the highest quality Auto Repairs since 1980 in Boston. Auto Body Shop fully licenced';
 
 export const metadata: Metadata = {
   title: {
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     siteName: title,
     locale: 'en_CA',
     type: 'website',
-    images: [{ url: `/favicon.svg` }]
+    images: [{ url: `/favicon.svg`, width: 168, height: 48 }]
   },
   icons: {
     shortcut: [{ url: `/favicon.svg` }]
