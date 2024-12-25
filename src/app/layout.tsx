@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import '@/styles/globals.scss';
-import { _siteUrl } from '@/lib/constants';
+
 import { epilogue, roboto } from '@/styles/fonts/fonts';
 import Header from '@/components/sections/Header/Header';
 import { Toaster } from '@/components/ui/toaster';
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     siteName: title,
     locale: 'en_CA',
     type: 'website',
-    images: [{ url: `${_siteUrl}/favicon.svg` }]
+    images: [{ url: `/favicon.svg` }]
   },
   icons: {
-    shortcut: [{ url: `${_siteUrl}/favicon.svg` }]
+    shortcut: [{ url: `/favicon.svg` }]
   }
 };
 
