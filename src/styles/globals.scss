@@ -1,0 +1,42 @@
+@use './normalize.css';
+@use './spinner.scss';
+@use './browserOptions.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-[18px];
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased bg-white;
+  }
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+@layer components {
+  .content {
+    @apply max-w-[700px] space-y-4;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-start {
+    @apply flex justify-start items-start;
+  }
+
+  .flex-end {
+    @apply flex justify-end items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+}
