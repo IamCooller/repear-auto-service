@@ -120,8 +120,8 @@ const FormBlock = () => {
             name="FullName"
             render={({ field }) => (
               <FormItem>
+                <FormLabel className="hidden">Full Name</FormLabel>
                 <FormControl>
-                  <FormLabel className="hidden">Full Name</FormLabel>
                   <Input
                     {...field}
                     type="text"
@@ -139,8 +139,8 @@ const FormBlock = () => {
             name="phone"
             render={({ field }) => (
               <FormItem>
+                <FormLabel className="hidden">Phone Number</FormLabel>
                 <FormControl>
-                  <FormLabel className="hidden">Phone Number</FormLabel>
                   <Input
                     {...field}
                     type="tel"
@@ -159,8 +159,8 @@ const FormBlock = () => {
             name="vin"
             render={({ field }) => (
               <FormItem>
+                <FormLabel className="hidden">VIN Number</FormLabel>
                 <FormControl>
-                  <FormLabel className="hidden">VIN Number</FormLabel>
                   <Input {...field} type="text" placeholder="VIN Number" />
                 </FormControl>
                 <FormMessage />
@@ -173,8 +173,8 @@ const FormBlock = () => {
             name="comments"
             render={({ field }) => (
               <FormItem>
+                <FormLabel className="hidden">Comments</FormLabel>
                 <FormControl>
-                  <FormLabel className="hidden">Comments</FormLabel>
                   <Input
                     {...field}
                     type="text"
@@ -190,8 +190,8 @@ const FormBlock = () => {
           <div className="grid lg:grid-cols-3 gap-[20px]">
             {[0, 1, 2].map(index => (
               <FormItem key={index}>
+                <FormLabel className="hidden">File Upload</FormLabel>
                 <FormControl>
-                  <FormLabel className="hidden">File Upload</FormLabel>
                   <button
                     className={`w-full cursor-pointer flex items-center justify-between px-[24px] py-[29px]  bg-black relative hover:bg-white hover:text-black border-2  font-robotoborder-transparent hover:border-black active:scale-95  transition-all duration-300 ease-in-out ${
                       form.watch('files')[index] ? 'text-red' : 'text-white'

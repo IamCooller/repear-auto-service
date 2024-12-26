@@ -12,7 +12,9 @@ const description =
   'World Auto Body Inc. has been providing the highest quality Auto Repairs since 1980 in Boston. Auto Body Shop fully licenced';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(_siteUrl),
+  metadataBase: new URL(
+    _siteUrl.startsWith('http') ? _siteUrl : `https://${_siteUrl}`
+  ),
   title: {
     template: `%s | ${title}`,
     default: title
