@@ -52,7 +52,7 @@ const DetailingSection = () => {
     }
   ];
   return (
-    <section className="bg-black py-[60px]">
+    <section className="bg-black py-[60px] md:mb-[160px] mb-[60px]">
       <div className="container">
         <SubTitle
           text="Make your car look new in only few minutes"
@@ -87,7 +87,7 @@ const DetailingSection = () => {
         </AnimatedGrid>
       </div>
       <div className="container">
-        <p className="font-semibold text-[32px] lg:text-[60px] text-white mt-[20px] md:mt-[40px]">
+        <p className="font-semibold text-[32px] lg:text-[60px] lg:leading-[72px] text-white mt-[20px] md:mt-[40px]">
           Our employee will go over the vehicle with the owner to identify any
           interior stains or exterior scratches that require further attention
           beyond detailing.

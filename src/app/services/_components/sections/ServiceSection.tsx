@@ -8,8 +8,8 @@ const ServiceSection = () => {
     <section className="pt-[80px] pb-[60px] md:pb-[160px]">
       <div className="container overflow-hidden">
         <Title>
-          At <span>John’s Collision</span>, we’ve got you covered from bumper to
-          bumper
+          At <span>John’s Auto Body Collision</span>, we’ve got you covered from
+          bumper to bumper
         </Title>
 
         <FadeInComponent>

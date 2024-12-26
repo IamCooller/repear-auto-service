@@ -2,10 +2,10 @@ import ContactForm from '@/components/ui/FormBlock';
 import SubTitle from '@/components/ui/SubTitle';
 import Title from '@/components/ui/Title';
 
-const ContactSection = () => {
+const ContactSection = ({ className = '' }: { className?: string }) => {
   return (
     <section
-      className="pt-[20px] md:pt-[40px] pb-[80px] md:pb-[126px]"
+      className={`pt-[20px] md:pt-[40px] pb-[80px] md:pb-[126px] ${className}`}
       id="contact"
     >
       <div className="container">
