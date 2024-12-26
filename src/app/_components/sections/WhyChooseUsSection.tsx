@@ -3,6 +3,9 @@ import Title from '@/components/ui/Title';
 import React from 'react';
 import WhyChooseUsCard from '../ui/WhyChooseUsCard';
 import AnimatedGrid from '@/components/Animations/AnimatedGrid';
+import AwardIcon from '@/components/ui/SVG/AwardIcon';
+import PhoneIcon from '@/components/ui/SVG/PhoneIcon';
+import ZapIcon from '@/components/ui/SVG/ZapIcon';
 const WhyChooseUsSection = () => {
   const cardsData = [
     {
@@ -10,28 +13,19 @@ const WhyChooseUsSection = () => {
       title: 'Experience',
       description:
         'Certified technicians using the latest tools and techniques',
-      icon: '/icons/award.svg',
-      bgColor: 'bg-black',
-      iconBg: 'bg-white',
-      textColor: 'text-white'
+      icon: <AwardIcon />
     },
     {
       id: 2,
       title: 'Integrity',
       description: 'Honest pricing and transparent communication',
-      icon: '/icons/phone.svg',
-      bgColor: 'bg-white',
-      iconBg: 'bg-red',
-      textColor: 'text-black'
+      icon: <PhoneIcon />
     },
     {
       id: 3,
       title: 'Efficiency',
       description: 'Quick turnaround without compromising on quality',
-      icon: '/icons/zap.svg',
-      bgColor: 'bg-white',
-      iconBg: 'bg-red',
-      textColor: 'text-black'
+      icon: <ZapIcon />
     }
   ];
   return (
