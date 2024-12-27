@@ -19,7 +19,7 @@ const FactSection = () => {
     },
     {
       title: 'Providing top-tier service since',
-      value: '2000',
+      value: '1995',
       bgColor: 'bg-red',
       textColor: 'text-white'
     }
