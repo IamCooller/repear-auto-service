@@ -20,7 +20,7 @@ const AboutSection = () => {
         <Title>
           At <span>John’s Auto Body Collision</span>, we’ve been committed to
           delivering <span>top-notch</span> auto body and detailing services{' '}
-          <span>since 2000</span>.
+          <span>since 1995</span>.
         </Title>
         <div className="mt-[60px]">
           <LazyVideo
