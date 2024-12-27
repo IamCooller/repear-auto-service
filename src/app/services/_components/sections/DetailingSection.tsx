@@ -8,7 +8,11 @@ const DetailingSection = () => {
     {
       id: 1,
       title: 'COMPLETE INTERIOR',
-      price: '$100 / $125',
+      price: (
+        <>
+          Sedan $100 <br /> SUV $125
+        </>
+      ),
       features: [
         'All dashboard vents and openings completely cleaned',
         'Streak-free window cleaning',
@@ -22,7 +26,11 @@ const DetailingSection = () => {
     {
       id: 2,
       title: 'Full Detail',
-      price: '$200 / $250',
+      price: (
+        <>
+          Sedan $200 <br /> SUV $250
+        </>
+      ),
       features: [
         'Complete interior and exterior detailing',
         'Exterior of car hand washed',
@@ -39,7 +47,12 @@ const DetailingSection = () => {
     {
       id: 3,
       title: 'COMPLETE EXTERIOR',
-      price: '$100 / $125',
+      price: (
+        <>
+          Sedan $100 <br />
+          SUV $125
+        </>
+      ),
       features: [
         'Complete interior and exterior detailing',
         'Exterior of car hand washed',
@@ -88,7 +101,7 @@ const DetailingSection = () => {
       </div>
       <div className="container">
         <p className="font-semibold text-[32px] lg:text-[60px] lg:leading-[72px] text-white mt-[20px] md:mt-[40px]">
-          Our employee will go over the vehicle with the owner to identify any
+          Our employees will go over the vehicle with the owner to identify any
           interior stains or exterior scratches that require further attention
           beyond detailing.
         </p>

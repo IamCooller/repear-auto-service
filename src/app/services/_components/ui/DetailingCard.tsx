@@ -8,7 +8,7 @@ const DetailingCard = ({
   buttonColor
 }: {
   title: string;
-  price: string;
+  price: React.ReactNode;
   features: string[];
   buttonColor: string;
 }) => {

@@ -19,7 +19,7 @@ const AboutSection = () => {
         <SubTitle text="25+ Years of Perfecting the Art of Car Detailing" />
         <Title>
           At <span>John’s Auto Body Collision</span>, we’ve been committed to
-          delivering <span>top-notch</span> auto body and detailing services
+          delivering <span>top-notch</span> auto body and detailing services{' '}
           <span>since 2000</span>.
         </Title>
         <div className="mt-[60px]">

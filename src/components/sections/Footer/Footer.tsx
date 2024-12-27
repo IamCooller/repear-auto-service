@@ -1,7 +1,6 @@
 import {
   _address,
   _addressLink,
-  _facebook,
   _instagram,
   _phone,
   _postalCode,
@@ -72,7 +71,7 @@ const Footer = () => {
           </ul>
           <ul className="space-y-[20px]">
             <li>Follow us</li>
-            <li>
+            {/*  <li>
               <Link
                 href={_facebook}
                 target="_blank"
@@ -80,7 +79,7 @@ const Footer = () => {
               >
                 Facebook
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 href={_instagram}
@@ -107,7 +106,11 @@ const Footer = () => {
           <div className="flex items-center gap-[20px] w-full max-w-[360px] justify-between">
             <p>
               Site by{' '}
-              <Link href="/" target="_blank" className="underline">
+              <Link
+                href="https://offthegridlab.com/"
+                target="_blank"
+                className="underline"
+              >
                 Offthegrid
               </Link>
             </p>
