@@ -1,9 +1,12 @@
+const { watch } = require('fs');
+
 module.exports = {
   apps: [
     {
       name: 'repear-auto-service',
       script: 'pnpm',
       args: 'run start',
+      watch: true,
       env: {
         PORT: 3050,
         NODE_ENV: 'production'
