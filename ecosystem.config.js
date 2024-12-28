@@ -9,7 +9,7 @@ module.exports = {
       cwd: '/var/www/repear-auto-service',
       exec_mode: 'fork',
       interpreter: 'node',
-      interpreter_args: '--max-old-space-size=1024', // Увеличиваем лимит до 1 ГБ
+      interpreter_args: '--initial-heap-size=256 --max-old-space-size=1024',
       autorestart: true,
       watch: false,
       max_memory_restart: '900M',
