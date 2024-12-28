@@ -1,10 +1,9 @@
-import LoadingSpinner from '@/app/loading';
 import { FadeInComponent } from '@/components/Animations';
 import SubTitle from '@/components/ui/SubTitle';
 import Title from '@/components/ui/Title';
-import dynamic from 'next/dynamic';
+
 import React from 'react';
-const BeforeAfterSlider = dynamic(
+/* const BeforeAfterSlider = dynamic(
   () => import('@/components/sections/BeforeAfterSlider'),
   {
     loading: () => (
@@ -13,7 +12,7 @@ const BeforeAfterSlider = dynamic(
       </div>
     )
   }
-);
+); */
 const BeforeAfterSection = () => {
   return (
     <section
@@ -25,7 +24,7 @@ const BeforeAfterSection = () => {
         <Title>
           From Damaged to Delivered – Witness the Remarkable Transformation!
         </Title>
-        <BeforeAfterSlider />
+        {/*     <BeforeAfterSlider /> */}
       </FadeInComponent>
     </section>
   );
