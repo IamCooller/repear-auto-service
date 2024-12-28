@@ -34,8 +34,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     return () => clearInterval(counter);
   }, [cleanValue, duration]);
 
-  // Форматируем число с запятыми
-  const formattedCount = count.toLocaleString();
+  // Форматируем число с запятыми только если больше 999
+  const formattedCount =
+    count > 2000 ? count.toLocaleString() : count.toString();
 
   return (
     <motion.div

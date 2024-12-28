@@ -21,6 +21,12 @@ const FactCard: React.FC<FactCardProps> = ({
   const numberPart = numberMatch ? numberMatch[0] : null;
   const textPart = value.replace(numberPart || '', ''); // Убирает число из строки, оставляя текст
 
+  // Проверяем, содержит ли исходное значение запятую
+  const formattedNumberPart =
+    numberPart && value.includes(',')
+      ? numberPart
+      : parseInt(numberPart || '', 10).toString();
+
   return (
     <div
       className={`${bgColor} ${
@@ -31,7 +37,10 @@ const FactCard: React.FC<FactCardProps> = ({
       <h2 className="font-semibold text-[80px] leading-none min-[1340px]:text-8xl">
         {numberPart ? (
           <>
-            <AnimatedCounter value={numberPart} className="inline-block" />
+            <AnimatedCounter
+              value={formattedNumberPart}
+              className="inline-block"
+            />
             {textPart}
           </>
         ) : (
