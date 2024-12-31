@@ -47,6 +47,7 @@ const FormBlock = () => {
    */
   const onSubmit = async (data: z.infer<typeof ContactForm>) => {
     setLoading(true);
+    let isMounted = true;
     try {
       const formData = new FormData();
       formData.append('FullName', data.FullName);
@@ -62,32 +63,41 @@ const FormBlock = () => {
       });
 
       const res = await sendContactForm(formData);
-
-      if (res.errors) {
-        console.error(res.errors);
+      if (isMounted) {
+        if (res.errors) {
+          console.error(res.errors);
+          toast({
+            variant: 'destructive',
+            title: 'Error',
+            description: res.message
+          });
+        } else {
+          toast({
+            variant: 'success',
+            title: 'Success',
+            description: res.message
+          });
+          form.reset();
+        }
+      }
+    } catch (error) {
+      if (isMounted) {
         toast({
           variant: 'destructive',
           title: 'Error',
-          description: res.message
+          description: (error as Error)?.message || 'Failed to send message'
         });
-      } else {
-        toast({
-          variant: 'success',
-          title: 'Success',
-          description: res.message
-        });
-        form.reset();
+        console.error('Form submission error:', error);
       }
-    } catch (error) {
-      toast({
-        variant: 'destructive',
-        title: 'Error',
-        description: (error as Error)?.message || 'Failed to send message'
-      });
-      console.error('Form submission error:', error);
     } finally {
-      setLoading(false);
+      if (isMounted) {
+        setLoading(false);
+      }
     }
+
+    return () => {
+      isMounted = false;
+    };
   };
   const handleFileChange = (
     e: React.ChangeEvent<HTMLInputElement>,

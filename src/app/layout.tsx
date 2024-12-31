@@ -6,6 +6,7 @@ import Header from '@/components/sections/Header/Header';
 import { Toaster } from '@/components/ui/toaster';
 import Footer from '@/components/sections/Footer/Footer';
 import { _siteUrl } from '@/lib/constants';
+import SnowClient from './SnowClient';
 
 const title = 'Auto Body Shop in Dedham MA | World Auto Body Inc';
 const description =
@@ -47,6 +48,7 @@ export default function RootLayout({
       >
         <Header />
         <main className="min-h-screen">{children}</main>
+        <SnowClient />
         <Footer />
         <Toaster />
       </body>
