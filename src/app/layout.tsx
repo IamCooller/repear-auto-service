@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     default: title
   },
   description: description,
+  verification: { google: 'YNqtiY9yi9CSFwr9IITa6JB6nl9-8Y_CxvjmN4qfDNY' },
   openGraph: {
     title: title,
     description: description,
