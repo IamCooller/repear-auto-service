@@ -8,9 +8,9 @@ import Footer from '@/components/sections/Footer/Footer';
 import { _siteUrl } from '@/lib/constants';
 import SnowClient from './SnowClient';
 
-const title = 'Auto Body Shop in Dedham MA | World Auto Body Inc';
+const title = 'Auto Body Shop in Dedham MA | Jhon’s Auto Body Inc';
 const description =
-  'World Auto Body Inc. has been providing the highest quality Auto Repairs since 1995 in Dedham MA. Auto Body Shop fully licenced';
+  'Jhon’s Auto Body Inc. has been providing the highest quality Auto Repairs since 1995 in Dedham MA. Auto Body Shop fully licenced';
 
 export const metadata: Metadata = {
   metadataBase: new URL(
