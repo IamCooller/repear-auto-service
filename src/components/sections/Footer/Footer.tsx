@@ -58,7 +58,7 @@ const Footer = () => {
             <li>Working hours</li>
             <li>
               Monday — Friday <br />
-              8am — 5pm
+              7:30am — 4pm
             </li>
 
             <li>
