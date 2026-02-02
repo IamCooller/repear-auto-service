@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
 interface EmailPayload {
   to: string;
@@ -11,26 +11,29 @@ interface EmailPayload {
   }[];
 }
 
-// Replace with your SMTP credentials
-const smtpOptions = {
-  host: process.env.SMTP_HOST || 'smtp.mailtrap.io',
-  port: parseInt(process.env.SMTP_PORT || '2525'),
-  secure: false,
-  auth: {
-    user: process.env.SMTP_USER || 'user',
-    pass: process.env.SMTP_PASSWORD || 'password'
-  }
-};
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (data: EmailPayload) => {
-  const transporter = nodemailer.createTransport({
-    ...smtpOptions
-  });
+  const { to, subject, html, attachments } = data;
 
-  return await transporter.sendMail({
-    from: process.env.EMAIL_FROM,
+  const resendAttachments = attachments?.map((att) => ({
+    filename: att.filename,
+    content: att.content instanceof Buffer ? att.content : Buffer.from(att.content),
+  }));
+
+  const result = await resend.emails.send({
+    from: process.env.EMAIL_FROM || 'noreply@johnsautobodyinc.com',
+    to: to,
     cc: process.env.EMAIL_CC,
     bcc: process.env.EMAIL_BCC,
-    ...data
+    subject: subject,
+    html: html,
+    attachments: resendAttachments,
   });
+
+  if (result.error) {
+    throw new Error(result.error.message);
+  }
+
+  return result;
 };
